@@ -98,7 +98,8 @@ int main()
 
         switch (sortchoice) {
             case 1:
-                // add part
+                insertionSort(myRecords, count);  
+                writeFile(myRecords, count);
                 break;
             case 2:
                 selectionSort(myRecords, count);  
