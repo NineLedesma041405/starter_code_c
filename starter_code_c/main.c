@@ -96,20 +96,34 @@ int main()
         printf("Input number (1-7): ");
         scanf("%d", &sortchoice);
 
+        long start, end;
+
         switch (sortchoice) {
             case 1:
+                start = currentTimeMillis();
                 insertionSort(myRecords, count);  
+                end = currentTimeMillis();
+
+                printf("Insertion Sort took %ld ms\n", end - start);
                 writeFile(myRecords, count);
                 break;
             case 2:
+                start = currentTimeMillis();
                 selectionSort(myRecords, count);  
+                end = currentTimeMillis();
+
+                printf("Selection Sort took %ld ms\n", end - start);
                 writeFile(myRecords, count);
                 break;
             case 3:
                 // add part 
                 break;
             case 4: 
+                start = currentTimeMillis();
                 quickSort (myRecords, 0, count - 1);
+                end = currentTimeMillis();
+
+                printf("Quick Sort took %ld ms\n", end - start);
                 writeFile(myRecords, count);
                 break;
             default:
