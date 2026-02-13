@@ -117,6 +117,13 @@ int main()
                 break;
             case 3:
                 // add part 
+
+                start = currentTimeMillis();
+                mergeSort(myRecords, 0, count-1);  
+                end = currentTimeMillis();
+
+                printf("Merge Sort took %ld ms\n", end - start);
+                writeFile(myRecords, count);
                 break;
             case 4: 
                 start = currentTimeMillis();
